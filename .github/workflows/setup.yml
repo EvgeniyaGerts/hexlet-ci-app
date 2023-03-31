@@ -9,6 +9,10 @@ jobs:
         with:
           node-version: 18
           cache: "npm"
+      - uses: snyk/actions/node@master
+        continue-on-error: true
+        env:
+          SNYK_TOKEN: 377b13a3-5e72-469a-a0d3-c46468dd3144
       - name: Setup
         run: make setup
       - name: Testing

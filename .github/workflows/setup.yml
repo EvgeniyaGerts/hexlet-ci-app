@@ -11,8 +11,6 @@ jobs:
           cache: "npm"
       - name: Setup
         run: make setup
-      - name: Start
-        run: make start
       - name: Testing
         run: make test
       - name: linting
